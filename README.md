@@ -6,6 +6,17 @@ Azure OpenAI · Arabic–English RAG · LangGraph · AI Governance
 
 I’m based in Dubai, UAE. At Zenith Group, I build Arabic and English AI assistants with Azure OpenAI and Azure AI Search and own their APIs and release pipelines. In my independent projects, I design agentic workflows with human approvals, audit trails, and recovery controls.
 
+## Featured repositories — suggested pins
+
+| Repository | Focus |
+| --- | --- |
+| [NAWA](https://github.com/shah-hussain-bangash/nawa-document-intelligence) | Bilingual Document AI |
+| [FinAgent](https://github.com/shah-hussain-bangash/finagent-enterprise) | Governed Financial AI |
+| [Aviation Nexus](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus) | Predictive Aviation AI |
+| [EDGEOPS](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects.) | Industrial Edge AI |
+| [NEXUS AI Control](https://github.com/shah-hussain-bangash/nexus-ai-control) | Agentic Governance |
+| [IndustrialAI Sentinel](https://github.com/shah-hussain-bangash/IndustrialAI-Sentinel) | Maintenance Operations |
+
 ## Featured AI engineering projects
 
 | Project | My contribution and evidence |
