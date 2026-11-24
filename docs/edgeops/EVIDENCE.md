@@ -8,11 +8,11 @@ EDGEOPS is an engineering portfolio project for industrial condition monitoring 
 
 **Current status: software demonstrated with synthetic inputs; physical validation pending.** The owner reports that some ordered hardware has arrived. The full set is not yet confirmed, and connection is deferred until the hardware is complete. No received-part photos, exact variants, connection, calibration or physical acceptance were verified for this evidence page. The original 30-product selection is preserved.
 
-The implementation is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. The original walkthrough, screenshot and PDF evidence retains its recorded source revision, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**. Subsequent verified work is listed separately below, with the latest reviewed implementation pinned to **`dc4134cc2fd1307f3262694d13f1bde0dc34af92`**.
+The implementation is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. The original walkthrough, screenshot and PDF evidence retains its recorded source revision, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**. Subsequent verified work is listed separately below, with the latest reviewed implementation pinned to **`fe0b19aa500dfbc1c6cc3d41a2150cbc66e3522f`**.
 
 ## Subsequent verified software work
 
-The latest implementation reviewed for this update is **`dc4134cc2fd1307f3262694d13f1bde0dc34af92`**, still in draft PR #2. Its four application CI workflow families passed. Earlier records below retain their original execution provenance; later work is pinned separately.
+The latest implementation reviewed for this update is **`fe0b19aa500dfbc1c6cc3d41a2150cbc66e3522f`**, still in draft PR #2. Its four application CI workflow families passed. Earlier records below retain their original execution provenance; later work is pinned separately.
 
 | Work | Verified result | Evidence and boundary |
 | --- | --- | --- |
@@ -40,6 +40,23 @@ Additional bounded reviews and evidence retained in the same draft:
 These are overlapping synthetic software checks, not additional physical milestones or evidence of industrial performance. No merge, deployment or hardware connection is included.
 
 **Application CI at `dc4134c`:** [Dashboard checks](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45369105935) · [Browser acceptance](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45369105895) · [Offline experiment registry](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45369105784) · [Model comparison](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45369105818) — all observed successful on 24 November 2026. These are pinned historical outcomes, not a live status badge.
+
+## Delivery integrity and worker checks
+
+The reviewed implementation at `fe0b19a` includes four demonstrated delivery fixes. Each linked review records its baseline, reproduction, regression outcomes and limits.
+
+| Check | Verified software behavior | Evidence |
+| --- | --- | --- |
+| Central receipt format | Malformed receipt identifiers or commit timestamps cannot mark a queued observation delivered. The queued payload is retained for investigation. | [Receipt validation; 46 related tests passed](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/fe0b19aa500dfbc1c6cc3d41a2150cbc66e3522f/projects/industrial-edge-ai-predictive-maintenance/dashboard/reviews/2026-11-24-central-receipt-validation.md) |
+| Duplicate central commit | A retry verifies the stored observation before returning success. An inconsistent central copy returns 503 without a receipt or automatic repair; lost-response retry does not falsely complete delivery. | [Duplicate integrity; 58 related tests passed](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/fe0b19aa500dfbc1c6cc3d41a2150cbc66e3522f/projects/industrial-edge-ai-predictive-maintenance/dashboard/reviews/2026-11-24-duplicate-commit-integrity.md) |
+| Local queued payload | A damaged payload is blocked before it is sent and retained with a sanitized reason. The next healthy record can still be claimed; expired workers remain fenced. | [Queue integrity; 61 related tests passed](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/fe0b19aa500dfbc1c6cc3d41a2150cbc66e3522f/projects/industrial-edge-ai-predictive-maintenance/dashboard/reviews/2026-11-24-spool-payload-integrity.md) |
+| Development worker settings | Invalid origins/ports fail before client or queue creation. Existing redirect and environment-proxy protections are explicitly tested; redirect targets receive no credentials or observations. | [Worker review; 44 delivery-related tests passed](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/fe0b19aa500dfbc1c6cc3d41a2150cbc66e3522f/projects/industrial-edge-ai-predictive-maintenance/dashboard/reviews/2026-11-24-worker-origin-validation.md) · [Worker tests](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/fe0b19aa500dfbc1c6cc3d41a2150cbc66e3522f/projects/industrial-edge-ai-predictive-maintenance/dashboard/tests/test_delivery_worker.py) |
+
+The counts are overlapping executions, not a unique-test total. New connection-boundary cases use a mock HTTP transport; the related integration suite uses an isolated loopback test server. No external endpoint, running user dashboard or equipment is used for those checks.
+
+**Application CI at `fe0b19a`:** [Dashboard checks](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967245) · [Browser acceptance](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967025) · [Offline experiment registry](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967356) · [Model comparison](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967082) — all observed successful on 24 November 2026.
+
+This remains a local synthetic software path. Receipt/record consistency does not authenticate a physical source or remote clock; the development worker is not secure measured edge-to-cloud transport. Physical acceptance, calibrated reference measurements, hardware integration and deployment acceptance remain outstanding. Draft PR #2 remains unmerged and undeployed.
 
 ## Downloadable project brief
 
