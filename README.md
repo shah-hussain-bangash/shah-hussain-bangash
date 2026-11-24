@@ -6,7 +6,11 @@ Azure OpenAI · Arabic–English RAG · LangGraph · AI Governance
 
 I’m based in Dubai, UAE. At Zenith Group, I build Arabic and English AI assistants with Azure OpenAI and Azure AI Search and own their APIs and release pipelines. In my independent projects, I design agentic workflows with human approvals, audit trails, and recovery controls.
 
-## Featured AI engineering and architecture
+[AI Development](#ai-development) · [AI Automation](#ai-automation) · [Web & Client Delivery](#web--client-delivery) · [Cloud Deployments](#cloud-deployments)
+
+## AI Development
+
+### Featured case studies
 
 | Project | My contribution and evidence |
 | --- | --- |
@@ -14,15 +18,9 @@ I’m based in Dubai, UAE. At Zenith Group, I build Arabic and English AI assist
 | [FinAgent Enterprise](https://github.com/shah-hussain-bangash/finagent-enterprise) | I tied reviewer decisions to specific report versions and evidence snapshots. The synthetic workflow demonstrates independent review, including rejection of stale decisions and self-review. [Case study](https://github.com/shah-hussain-bangash/finagent-enterprise/blob/main/docs/07-case-study/08-CASE-STUDY.md) |
 | [Aviation Intelligence Nexus](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus) | I switched the flight-data audit to month-by-month processing after the full-period query exceeded temporary storage. The audit reconciled 2.84 million historical flight records. [Quick summary](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/case-study/AVIATION_INTELLIGENCE_NEXUS_SUMMARY.md) · [75-second walkthrough](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/case-study/assets/aviation-intelligence-nexus-walkthrough.mp4) · [Technical case study](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/case-study/AVIATION_INTELLIGENCE_NEXUS_CASE_STUDY.md) |
 | [NEXUS AI Control](https://github.com/shah-hussain-bangash/nexus-ai-control) | I tied approvals to the exact request and destination. When a timeout leaves the outcome uncertain, the workflow records it for reconciliation. [Case study](https://github.com/shah-hussain-bangash/nexus-ai-control/blob/main/docs/case-study/NEXUS_AI_CONTROL_CASE_STUDY.md) |
-
-## AI automation and system integrations
-
-| Portfolio | Focus |
-| --- | --- |
-| [n8n AI Automation Portfolio](https://github.com/shah-hussain-bangash/N8N-AI-Automation-Portfolio-) | Business workflows and system integrations built with n8n. Workflow exports are pending. |
 | [SupplyPilot AI](https://github.com/shah-hussain-bangash/SupplyPilot-AI) | Procurement prototype covering supplier quotations, approval, simulated purchasing, and invoice reconciliation. |
 
-## Data engineering and industrial AI
+### Data engineering and industrial AI
 
 | Project | Focus |
 | --- | --- |
@@ -30,7 +28,11 @@ I’m based in Dubai, UAE. At Zenith Group, I build Arabic and English AI assist
 | [EDGEOPS](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects.) | I designed an industrial predictive maintenance architecture with ESP32 sensor capture, Raspberry Pi analytics, and human review. The repository includes starter firmware. Physical hardware validation is pending. [Case study](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/main/projects/industrial-edge-ai-predictive-maintenance/enterprise-architecture/15-PORTFOLIO-CASE-STUDY-AND-EVIDENCE.md) |
 | [IndustrialAI Sentinel](https://github.com/shah-hussain-bangash/IndustrialAI-Sentinel) | Runnable local demo for equipment condition monitoring, maintenance review, and work-order tracking. |
 
-## Client delivery · Web, SEO, and digital content
+## AI Automation
+
+The [n8n AI Automation Portfolio](https://github.com/shah-hussain-bangash/N8N-AI-Automation-Portfolio-) is the home for my n8n workflows, business automations, and system integrations. Workflow exports are pending.
+
+## Web & Client Delivery
 
 | Portfolio | My contribution |
 | --- | --- |
@@ -38,7 +40,7 @@ I’m based in Dubai, UAE. At Zenith Group, I build Arabic and English AI assist
 | [RBD Tourism Chauffeur Services](https://github.com/shah-hussain-bangash/RBD-Tourism-Chauffeur-Services) | Website and chatbot development, SEO, blog writing, and advertising design. [Advertising portfolio](https://github.com/shah-hussain-bangash/RBD-Tourism-Chauffeur-Services/blob/main/advertising-portfolio/README.md) |
 | [Dubai Property Developers](https://github.com/shah-hussain-bangash/dubai-property-developers) | Real estate web application. |
 
-## Cloud deployments
+## Cloud Deployments
 
 - **Zenith Enterprise AI Workspace** — development deployment. [Open workspace](https://zenith-ai-workspace.duckdns.org/sign-in) · [Architecture case study](https://github.com/shah-hussain-bangash/ENTERPRISE-AI-PRODUCTION-SYSTEMS/blob/main/docs/case-study/ZENITH_ENTERPRISE_AI_WORKSPACE_CASE_STUDY.md)
 - **Dubai Property Developers** — [Open project](https://dubai-property-test.duckdns.org/)
