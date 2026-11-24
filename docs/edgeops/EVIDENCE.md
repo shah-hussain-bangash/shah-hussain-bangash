@@ -81,3 +81,10 @@ No real-world failure prediction, uptime improvement, cost saving, safety certif
 ## Reproduce or review
 
 Start with the [pinned walkthrough instructions](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/9f8831f257c490a0b8febf701628bae2ecc63c2d/projects/industrial-edge-ai-predictive-maintenance/phase-01-hardware/validation/README.md) and use an interpreter with the existing dashboard test dependencies. The replay creates disposable test data and writes to a new output path; it does not require hardware. Inspect the corresponding source/tests and GitHub run logs rather than relying on screenshots or this summary alone.
+
+## Evidence file-consistency checks
+
+The [profile evidence workflow](https://github.com/shah-hussain-bangash/shah-hussain-bangash/actions/workflows/edgeops-evidence.yml) checks local document/image links, the three screenshot hashes, the PDF hash and agreement between the recorded source commits and historical CI metadata. It also runs corruption and broken-link regression checks. Run it locally with `python scripts/verify_edgeops_evidence.py` and `python -m unittest discover -s tests -p test_edgeops_evidence.py`.
+
+These checks run offline after checkout. They do not test external link availability, refresh application CI outcomes, authenticate the original captures or establish physical acceptance. Passing this workflow means the published evidence files are internally consistent, not that EDGEOPS is production-ready.
+
