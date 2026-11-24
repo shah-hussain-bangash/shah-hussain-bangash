@@ -8,11 +8,11 @@ EDGEOPS is an engineering portfolio project for industrial condition monitoring 
 
 **Current status: software demonstrated with synthetic inputs; physical validation pending.** The owner reports that some ordered hardware has arrived. The full set is not yet confirmed, and connection is deferred until the hardware is complete. No received-part photos, exact variants, connection, calibration or physical acceptance were verified for this evidence page. The original 30-product selection is preserved.
 
-The implementation is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. The original walkthrough, screenshot and PDF evidence retains its recorded source revision, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**. Subsequent verified work is listed separately below, with the latest reviewed implementation pinned to **`c99fab2965f90772ed5d90e8528706879de14438`**.
+The implementation is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. The original walkthrough, screenshot and PDF evidence retains its recorded source revision, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**. Subsequent verified work is listed separately below, with the latest reviewed implementation pinned to **`ff52301b93bcfa4baa47cfa6a636a0ab4f09eda5`**.
 
 ## Subsequent verified software work
 
-The latest implementation reviewed for this update is **`c99fab2965f90772ed5d90e8528706879de14438`**, still in draft PR #2. Its four application CI workflow families passed. Earlier records below retain their original execution provenance; later work is pinned separately.
+The latest implementation reviewed for this update is **`ff52301b93bcfa4baa47cfa6a636a0ab4f09eda5`**, still in draft PR #2. Its four application CI workflow families passed. Earlier records below retain their original execution provenance; later work is pinned separately.
 
 | Work | Verified result | Evidence and boundary |
 | --- | --- | --- |
@@ -73,6 +73,22 @@ All **50 delivery-related tests passed** at the latest reviewed source. The proc
 These are specific software failure cases, not power-loss, actual disk-exhaustion, every possible crash boundary, secure remote transport or general exactly-once evidence. Hardware acceptance remains pending. Test counts overlap earlier executions and must not be added together.
 
 **Application CI at `c99fab2`:** [Dashboard checks](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45392699669) · [Browser acceptance](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45392699381) · [Experiment registry](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45392699411) · [Model comparison](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45392699522) — all observed successful on 24 November 2026.
+
+## Capture summary and capacity boundaries
+
+The following finite synthetic fixtures add calculation and admission-boundary evidence. No application fix was needed. Results are pinned at reviewed source `ff52301`, while each JSON retains its original execution baseline.
+
+| Check | Verified result | Boundary and source |
+| --- | --- | --- |
+| 600-record offline summary | Whole-package valid counts are ADXL345 594, DS18B20 596 and INA219 598. Two sequence gaps, a 602-second synthesized receipt span and a four-second maximum interval are reported correctly; invalid readings remain null and valid zero is preserved. | [Summary fixture result](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/ff52301b93bcfa4baa47cfa6a636a0ab4f09eda5/projects/industrial-edge-ai-predictive-maintenance/phase-01-hardware/validation/synthetic-600-record-summary-result.json). Invented timestamps, not a real 600-second run. Whole-package counts do not replace H1 window counts or reference measurements. |
+| Default local queue limit | With 10,000 saved events and 6,758,890 serialized payload bytes, an exact retry adds no row and a new event is refused. Restart preserves counts, usage and every saved row. | [Queue-capacity result](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/ff52301b93bcfa4baa47cfa6a636a0ab4f09eda5/projects/industrial-edge-ai-predictive-maintenance/phase-01-hardware/validation/synthetic-default-queue-capacity-result.json). One normal enqueue plus 9,999 direct synthetic inserts; payload bytes exclude SQLite/WAL overhead. |
+| Full central store | At 10,000 observations, exact retry returns HTTP 200 with the original receipt. A new event receives HTTP 429 without a receipt; the edge queue retains it as pending. Central rows and audit count remain unchanged. | [Central-capacity result](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/ff52301b93bcfa4baa47cfa6a636a0ab4f09eda5/projects/industrial-edge-ai-predictive-maintenance/phase-01-hardware/validation/synthetic-central-capacity-backpressure-result.json). One API commit plus 9,999 direct synthetic inserts; authenticated API requests are in-process. |
+
+Recorded executions passed **61 hardware-side software tests** and **52 delivery-related tests**. These are separate executions with historical overlap, not figures to add into a unique-test total. The fixtures do not establish sustained ingestion rate, latency, soak behavior, disk-exhaustion recovery, PostgreSQL capacity or industrial performance.
+
+The summary's `requires_review` flag concerns transformation/quarantine state; false is not sensor-quality or physical acceptance. The 600-record fixture explicitly leaves H1 pending. No hardware, measured sampling rate or reference accuracy was verified.
+
+**Application CI at `ff52301`:** [Dashboard checks](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45399746575) · [Browser acceptance](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45399746482) · [Experiment registry](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45399746645) · [Model comparison](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45399746343) — all observed successful on 24 November 2026.
 
 ## Downloadable hardware preparation pack
 
