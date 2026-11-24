@@ -1,0 +1,64 @@
+{
+  "schema": "edgeops.visual-software-evidence.v1",
+  "captured_date": "2026-11-24",
+  "scope": "synthetic-browser-tests-only",
+  "source_repository": "shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects.",
+  "source_commit": "9f8831f257c490a0b8febf701628bae2ecc63c2d",
+  "source_tree": "190dd2bc4a804785d5fb340f498ac51a1ed56c7c",
+  "local_commit_same_tree": "b759840534c9f7969fb2ab2408c83eadbfd7e59f",
+  "capture_environment": "Windows; headless Chromium through existing Playwright test harness; disposable local services and databases",
+  "suites": [
+    {
+      "command": "node tests/browser_observation_inspector.cjs",
+      "result": "PASS",
+      "source": "https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/9f8831f257c490a0b8febf701628bae2ecc63c2d/projects/industrial-edge-ai-predictive-maintenance/dashboard/tests/browser_observation_inspector.cjs"
+    },
+    {
+      "command": "node tests/browser_observation_incidents.cjs",
+      "result": "PASS",
+      "source": "https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/9f8831f257c490a0b8febf701628bae2ecc63c2d/projects/industrial-edge-ai-predictive-maintenance/dashboard/tests/browser_observation_incidents.cjs"
+    }
+  ],
+  "tested_viewport_widths": [
+    1440,
+    1024,
+    768,
+    390,
+    320
+  ],
+  "image_processing": "none; original PNG bytes",
+  "images": [
+    {
+      "path": "assets/observation-inspector-1440.png",
+      "bytes": 192811,
+      "sha256": "3dc6a145b6b4c6dda7c5c8da520da23c029563e396dcd4e4fc61794d49a5f9fe",
+      "git_blob_sha": "1a6907e451f2ebd1c39d20193578d153009d721d",
+      "viewport_width": 1440,
+      "viewport_height": 1000
+    },
+    {
+      "path": "assets/observation-case-1440.png",
+      "bytes": 115395,
+      "sha256": "ced0cf39b2a388e7b28063d035e2b19e8f0ee37a058120957511d30c08ec4b9b",
+      "git_blob_sha": "fc41cde0633d6c678274e9c1bb491a8b8eab39fe",
+      "viewport_width": 1440,
+      "viewport_height": 1000
+    },
+    {
+      "path": "assets/observation-inspector-390.png",
+      "bytes": 51163,
+      "sha256": "f28b00d324ea9f30d248ea70fa3a3a0aa294bd4046847bf7b14c535ced0b57eb",
+      "git_blob_sha": "586b44dd8c81be8b4548947559e3b0f9ef774998",
+      "viewport_width": 390,
+      "viewport_height": 1000
+    }
+  ],
+  "limitations": [
+    "Different synthetic fixtures from the saved one-observation API example.",
+    "Incident screenshot is before submission and includes intentional escaping-test text.",
+    "Scrollable dialogs are only partly visible.",
+    "No physical acquisition, calibration, equipment authorization or production acceptance."
+  ],
+  "hardware_connected": false,
+  "physical_acceptance_verified": false
+}

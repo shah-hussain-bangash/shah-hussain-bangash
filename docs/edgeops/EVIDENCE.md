@@ -10,6 +10,10 @@ EDGEOPS is an engineering portfolio project for industrial condition monitoring 
 
 The implementation cited here is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. Links below pin the reviewed commit, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**, so readers can distinguish the demonstrated software from older default-branch documentation.
 
+## Visual software evidence
+
+[View the desktop and mobile walkthrough](VISUAL-WALKTHROUGH.md), captured from fresh successful synthetic browser tests on 24 November 2026. Original screenshots and their source/test provenance are included; no hardware operation is shown.
+
 ## Engineering contribution
 
 I implemented software that carries a synthetic observation's readings, units, quality and clock limitations into an incident and a maintenance draft. The saved source snapshot lets a reviewer see the evidence used to prepare the draft. The workflow does not infer an equipment fault or authorize physical action.

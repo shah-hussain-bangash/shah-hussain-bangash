@@ -25,7 +25,7 @@ I’m based in Dubai, UAE. At Zenith Group, I build Arabic and English AI assist
 | Project | Focus |
 | --- | --- |
 | [DataNexus AI Enterprise](https://github.com/shah-hussain-bangash/DataNexus-AI-Enterprise) | Architecture and engineering foundation for streaming, lakehouse storage, and governed AI investigation. |
-| [EDGEOPS](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects.) | I built a local industrial-operations prototype with authenticated APIs, synthetic observation evidence, incidents and maintenance drafts. A saved walkthrough and four passing CI workflows support the software claims. Hardware connection and physical validation are pending. [Project evidence](docs/edgeops/EVIDENCE.md) · [Draft implementation](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./pull/2) |
+| [EDGEOPS](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects.) | I built a local industrial-operations prototype with authenticated APIs, synthetic observation evidence, incidents and maintenance drafts. A saved walkthrough and four passing CI workflows support the software claims. Hardware connection and physical validation are pending. [Project evidence](docs/edgeops/EVIDENCE.md) · [Visual walkthrough](docs/edgeops/VISUAL-WALKTHROUGH.md) · [Draft implementation](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./pull/2) |
 | [IndustrialAI Sentinel](https://github.com/shah-hussain-bangash/IndustrialAI-Sentinel) | Runnable local demo for equipment condition monitoring, maintenance review, and work-order tracking. |
 
 ## AI Automation
