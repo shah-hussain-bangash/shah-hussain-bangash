@@ -26,7 +26,7 @@ class EvidenceChecks(unittest.TestCase):
 
     def test_reviewed_package_passes_without_physical_authority(self):
         result = verify(self.root)
-        self.assertEqual(result['artifacts_checked'], 5)
+        self.assertEqual(result['artifacts_checked'], 6)
         self.assertFalse(result['physical_acceptance_verified'])
         self.assertFalse(result['external_links_checked'])
 
@@ -34,6 +34,22 @@ class EvidenceChecks(unittest.TestCase):
         path = self.docs/'assets/EDGEOPS-software-demo.webm'
         data = bytearray(path.read_bytes()); data[-1] ^= 1; path.write_bytes(data)
         with self.assertRaisesRegex(ValueError, 'SHA-256 differs'):
+            verify(self.root)
+
+    def test_same_size_arrival_pack_change_rejected(self):
+        path = self.docs/'assets/EDGEOPS-original-30-arrival-pack-v2.zip'
+        data = bytearray(path.read_bytes()); data[-1] ^= 1; path.write_bytes(data)
+        with self.assertRaisesRegex(ValueError, 'SHA-256 differs'):
+            verify(self.root)
+
+    def test_arrival_report_must_match_archive_reference(self):
+        self.change_manifest('arrival-pack-verification.json', lambda d:d.update(archive_sha256='0'*64))
+        with self.assertRaisesRegex(ValueError, 'report disagrees'):
+            verify(self.root)
+
+    def test_arrival_pack_cannot_claim_physical_acceptance(self):
+        self.change_manifest('arrival-pack-manifest.json', lambda d:d.update(physical_acceptance_verified=True))
+        with self.assertRaisesRegex(ValueError, 'physical acceptance'):
             verify(self.root)
 
     def test_changed_pdf_rejected(self):
@@ -77,3 +93,4 @@ class EvidenceChecks(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

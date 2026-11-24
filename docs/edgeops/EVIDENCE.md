@@ -8,11 +8,11 @@ EDGEOPS is an engineering portfolio project for industrial condition monitoring 
 
 **Current status: software demonstrated with synthetic inputs; physical validation pending.** The owner reports that some ordered hardware has arrived. The full set is not yet confirmed, and connection is deferred until the hardware is complete. No received-part photos, exact variants, connection, calibration or physical acceptance were verified for this evidence page. The original 30-product selection is preserved.
 
-The implementation is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. The original walkthrough, screenshot and PDF evidence retains its recorded source revision, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**. Subsequent verified work is listed separately below, with the latest reviewed implementation pinned to **`fe0b19aa500dfbc1c6cc3d41a2150cbc66e3522f`**.
+The implementation is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. The original walkthrough, screenshot and PDF evidence retains its recorded source revision, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**. Subsequent verified work is listed separately below, with the latest reviewed implementation pinned to **`99e989aff13e78d2b145f159d350f079bdf85371`**.
 
 ## Subsequent verified software work
 
-The latest implementation reviewed for this update is **`fe0b19aa500dfbc1c6cc3d41a2150cbc66e3522f`**, still in draft PR #2. Its four application CI workflow families passed. Earlier records below retain their original execution provenance; later work is pinned separately.
+The latest implementation reviewed for this update is **`99e989aff13e78d2b145f159d350f079bdf85371`**, still in draft PR #2. Its four application CI workflow families passed. Earlier records below retain their original execution provenance; later work is pinned separately.
 
 | Work | Verified result | Evidence and boundary |
 | --- | --- | --- |
@@ -57,6 +57,12 @@ The counts are overlapping executions, not a unique-test total. New connection-b
 **Application CI at `fe0b19a`:** [Dashboard checks](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967245) · [Browser acceptance](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967025) · [Offline experiment registry](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967356) · [Model comparison](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967082) — all observed successful on 24 November 2026.
 
 This remains a local synthetic software path. Receipt/record consistency does not authenticate a physical source or remote clock; the development worker is not secure measured edge-to-cloud transport. Physical acceptance, calibrated reference measurements, hardware integration and deployment acceptance remain outstanding. Draft PR #2 remains unmerged and undeployed.
+
+## Downloadable hardware preparation pack
+
+[Download and verification instructions](HARDWARE-ARRIVAL-PACK.md) provide the version-two ZIP for the same original 30 hardware categories. It includes the offline capture summary, its tests and the pending H1 checklist. The updated checker also supports unchanged version-one packs. The source update at `99e989a` passed all four application workflow families; 31 pack/API tests and 60 packaged hardware-side software tests passed in separate runs.
+
+This is an unsigned preparation artifact with a blank receipt worksheet. Owner-reported partial receipt does not identify verified items. Nothing in this download confirms wiring, calibration or physical acceptance. [Artifact provenance](arrival-pack-manifest.json) · [Offline verification result](arrival-pack-verification.json).
 
 ## Downloadable project brief
 
@@ -132,7 +138,8 @@ Start with the [pinned walkthrough instructions](https://github.com/shah-hussain
 
 ## Evidence file-consistency checks
 
-The [profile evidence workflow](https://github.com/shah-hussain-bangash/shah-hussain-bangash/actions/workflows/edgeops-evidence.yml) checks local document/image links, the three screenshot hashes, the PDF/video hashes and agreement between the original screenshot/PDF source commits and historical CI metadata. The video has its own capture/source manifest. It also runs corruption and broken-link regression checks. Run it locally with `python scripts/verify_edgeops_evidence.py` and `python -m unittest discover -s tests -p test_edgeops_evidence.py`.
+The [profile evidence workflow](https://github.com/shah-hussain-bangash/shah-hussain-bangash/actions/workflows/edgeops-evidence.yml) checks local document/image links, the three screenshot hashes, the PDF/video/arrival-ZIP hashes and agreement between the original screenshot/PDF source commits and historical CI metadata. The video has its own capture/source manifest. It also runs corruption and broken-link regression checks. Run it locally with `python scripts/verify_edgeops_evidence.py` and `python -m unittest discover -s tests -p test_edgeops_evidence.py`.
 
 These checks run offline after checkout. They do not test external link availability, refresh application CI outcomes, authenticate the original captures or establish physical acceptance. Passing this workflow means the published evidence files are internally consistent, not that EDGEOPS is production-ready.
+
 

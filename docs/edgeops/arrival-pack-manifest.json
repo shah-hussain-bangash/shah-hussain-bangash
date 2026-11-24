@@ -1,0 +1,17 @@
+{
+  "schema": "edgeops.hardware-preparation-pack-evidence.v1",
+  "source_application_commit": "99e989aff13e78d2b145f159d350f079bdf85371",
+  "software_tree": "6823c331c41bce4a8093f9ce34b52331824ea4b8",
+  "pack_format": "edgeops-arrival-pack-v2",
+  "file": "assets/EDGEOPS-original-30-arrival-pack-v2.zip",
+  "bytes": 83360,
+  "sha256": "c368c2e26be94ea313a7e2f4ce8f7fa932488cc9d8582df68a295eda8cb878e7",
+  "git_blob_sha": "955dc12e1285c2a27a370de21ab27d5b75323549",
+  "verification_report": "arrival-pack-verification.json",
+  "hardware_categories": 30,
+  "received_count_verified": 0,
+  "physical_acceptance_verified": false,
+  "equipment_authorized": false,
+  "production_ready": false,
+  "limitations": "Unsigned preparation sources and blank worksheet only; not proof of origin, receipt, wiring, calibration or physical acceptance."
+}

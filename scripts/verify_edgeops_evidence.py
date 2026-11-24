@@ -55,6 +55,29 @@ def verify(root):
                 and video['capture_checks']['source_snapshot_matches'] is True,
                 'Video capture claims disagree with the declared synthetic workflow')
         records.append({**video, 'path':video['file']})
+    pack_manifest = prefix/'arrival-pack-manifest.json'
+    if (root/pack_manifest).is_file():
+        pack = load(root, pack_manifest)
+        require(pack['schema'] == 'edgeops.hardware-preparation-pack-evidence.v1', 'Invalid pack manifest')
+        require(re.fullmatch(r'[0-9a-f]{40}', pack['source_application_commit']), 'Invalid pack source commit')
+        require(pack['pack_format'] == 'edgeops-arrival-pack-v2'
+                and type(pack['hardware_categories']) is int and pack['hardware_categories'] == 30
+                and type(pack['received_count_verified']) is int and pack['received_count_verified'] == 0,
+                'Pack scope or receipt claim differs')
+        for key in ('physical_acceptance_verified', 'equipment_authorized', 'production_ready'):
+            require(pack[key] is False, 'Preparation pack cannot establish physical acceptance')
+        report = load(root, prefix/pack['verification_report'])
+        require(report['archive_sha256'] == pack['sha256']
+                and report['pack_format'] == pack['pack_format']
+                and report['file_consistency'] == 'passed'
+                and type(report['files_checked']) is int and report['files_checked'] == 32
+                and type(report['hardware_categories']) is int and report['hardware_categories'] == 30
+                and type(report['received_count_verified']) is int and report['received_count_verified'] == 0,
+                'Pack verification report disagrees with artifact')
+        for key in ('physical_acceptance_verified', 'hardware_connected', 'equipment_authorized',
+                    'production_ready', 'source_authenticity_verified', 'signature_verified'):
+            require(report[key] is False, 'Pack report cannot establish physical authority')
+        records.append({**pack, 'path':pack['file']})
     for record in records:
         raw = file_at(root, prefix/record['path']).read_bytes()
         require(type(record['bytes']) is int and len(raw) == record['bytes'],
@@ -107,3 +130,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

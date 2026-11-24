@@ -1,0 +1,16 @@
+{
+  "scope": "offline-arrival-pack-file-consistency",
+  "file_consistency": "passed",
+  "pack_format": "edgeops-arrival-pack-v2",
+  "archive_sha256": "c368c2e26be94ea313a7e2f4ce8f7fa932488cc9d8582df68a295eda8cb878e7",
+  "files_checked": 32,
+  "hardware_categories": 30,
+  "received_count_verified": 0,
+  "signature_verified": false,
+  "source_authenticity_verified": false,
+  "physical_acceptance_verified": false,
+  "hardware_connected": false,
+  "equipment_authorized": false,
+  "production_ready": false,
+  "note": "Files match the supported pack structure and its internal references. This does not verify origin, signatures, source correctness, received parts or physical compatibility. Independently review the repository. Edit a separate worksheet copy after receipt."
+}
