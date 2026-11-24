@@ -1,0 +1,27 @@
+{
+  "schema": "edgeops.software-evidence-brief.v1",
+  "prepared_date": "2026-11-24",
+  "file": "EDGEOPS-Software-Evidence-Brief.pdf",
+  "bytes": 408542,
+  "sha256": "025243a4f9edc2d0ef8c2336a8ceabefceb7d35de20c72d05176c80dfb71ebba",
+  "git_blob_sha": "105458186f6084a8f8ce728ebfeb71a1f45f66ab",
+  "pages": 2,
+  "clickable_links": 7,
+  "source_profile_commit": "24ed40ec93ad76f88f98583cf584728ab819413b",
+  "source_application_commit": "9f8831f257c490a0b8febf701628bae2ecc63c2d",
+  "source_documents": [
+    "EVIDENCE.md",
+    "VISUAL-WALKTHROUGH.md",
+    "ci-evidence.json",
+    "visual-capture-manifest.json"
+  ],
+  "verification": {
+    "rendered_pages_visually_reviewed": 2,
+    "pdf_text_status_checks": "passed",
+    "link_annotation_count": "passed"
+  },
+  "physical_acceptance_verified": false,
+  "hardware_connection": "deferred until original ordered set is complete; partial receipt is owner-reported",
+  "production_ready": false,
+  "scope": "Static software portfolio brief. Screenshots use disposable synthetic fixtures; test results describe their recorded source commits."
+}

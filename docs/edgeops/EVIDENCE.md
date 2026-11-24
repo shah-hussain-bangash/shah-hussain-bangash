@@ -10,6 +10,10 @@ EDGEOPS is an engineering portfolio project for industrial condition monitoring 
 
 The implementation cited here is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. Links below pin the reviewed commit, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**, so readers can distinguish the demonstrated software from older default-branch documentation.
 
+## Downloadable project brief
+
+[Download the two-page software evidence brief](EDGEOPS-Software-Evidence-Brief.pdf), prepared on 24 November 2026. It includes actual synthetic application captures, seven clickable source/evidence links, recorded software verification outcomes and the pending H1 hardware milestone. [PDF provenance and SHA-256](brief-manifest.json). The brief is a static portfolio snapshot, not a physical acceptance record.
+
 ## Visual software evidence
 
 [View the desktop and mobile walkthrough](VISUAL-WALKTHROUGH.md), captured from fresh successful synthetic browser tests on 24 November 2026. Original screenshots and their source/test provenance are included; no hardware operation is shown.
