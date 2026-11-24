@@ -1,0 +1,48 @@
+{
+  "schema": "edgeops.synthetic-video-evidence.v1",
+  "captured_date": "2026-11-24",
+  "file": "assets/EDGEOPS-software-demo.webm",
+  "bytes": 333727,
+  "sha256": "d1fd7601f4c013696b7bd17283c1d8a4fc467d8439d95b05e3c96c0f488762f5",
+  "git_blob_sha": "d64fd4c77e41bad9207e8edee39a07d89a0034a5",
+  "duration_seconds": 30,
+  "width": 1440,
+  "height": 1000,
+  "frame_rate": 2,
+  "codec": "VP9 / WebM",
+  "audio": false,
+  "source_application_commit": "27d8296e0d15997d61b9bb8fd9bc136f996c2808",
+  "source_tree": "6e3fdb223cea89b3a49733bcf5100ef787745850",
+  "capture_checks": {
+    "source_application_commit": "27d8296e0d15997d61b9bb8fd9bc136f996c2808",
+    "synthetic_fixture": true,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "login_recorded": false,
+    "storage_state_written_to_disk": false,
+    "browser_page_errors": 0,
+    "maintenance_status": "draft",
+    "execution_enabled": false,
+    "source_snapshot_matches": true,
+    "hardware_connected": false,
+    "physical_acceptance_verified": false
+  },
+  "original_recording": {
+    "bytes": 2478110,
+    "sha256": "54764824d93ff1f327e56eb083b46d3d81287f8884382a732ee39664ec3036a2",
+    "duration_seconds": 29.8,
+    "published": false
+  },
+  "processing": "Lossy playback preview sampled at 2 fps from the original recording; same scene order and workflow. Frame sampling rounds the original 29.8 s duration to 30 s. Full-quality original retained locally.",
+  "visually_reviewed_preview_frame_seconds": [
+    4.5,
+    11.4,
+    24.6
+  ],
+  "scope": "Scripted local synthetic demonstration, not a full browser regression, hardware acquisition or equipment authorization.",
+  "hardware_connected": false,
+  "physical_acceptance_verified": false,
+  "production_ready": false
+}

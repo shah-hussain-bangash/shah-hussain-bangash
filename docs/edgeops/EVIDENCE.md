@@ -31,7 +31,7 @@ These test counts describe separate executions with overlapping suites; they mus
 
 ## Visual software evidence
 
-[View the desktop and mobile walkthrough](VISUAL-WALKTHROUGH.md), captured from fresh successful synthetic browser tests on 24 November 2026. Original screenshots and their source/test provenance are included; no hardware operation is shown.
+[View the desktop/mobile screenshots and 30-second video preview](VISUAL-WALKTHROUGH.md). The original screenshots came from successful synthetic browser tests; the video records a separate scripted synthetic observation-to-maintenance-draft workflow. Each has its own source/provenance record. No hardware operation is shown.
 
 ## Engineering contribution
 
@@ -99,7 +99,7 @@ Start with the [pinned walkthrough instructions](https://github.com/shah-hussain
 
 ## Evidence file-consistency checks
 
-The [profile evidence workflow](https://github.com/shah-hussain-bangash/shah-hussain-bangash/actions/workflows/edgeops-evidence.yml) checks local document/image links, the three screenshot hashes, the PDF hash and agreement between the recorded source commits and historical CI metadata. It also runs corruption and broken-link regression checks. Run it locally with `python scripts/verify_edgeops_evidence.py` and `python -m unittest discover -s tests -p test_edgeops_evidence.py`.
+The [profile evidence workflow](https://github.com/shah-hussain-bangash/shah-hussain-bangash/actions/workflows/edgeops-evidence.yml) checks local document/image links, the three screenshot hashes, the PDF/video hashes and agreement between the original screenshot/PDF source commits and historical CI metadata. The video has its own capture/source manifest. It also runs corruption and broken-link regression checks. Run it locally with `python scripts/verify_edgeops_evidence.py` and `python -m unittest discover -s tests -p test_edgeops_evidence.py`.
 
 These checks run offline after checkout. They do not test external link availability, refresh application CI outcomes, authenticate the original captures or establish physical acceptance. Passing this workflow means the published evidence files are internally consistent, not that EDGEOPS is production-ready.
 

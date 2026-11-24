@@ -42,6 +42,19 @@ def verify(root):
     require(brief['production_ready'] is False and ci['physical_status']['production_ready'] is False,
             'Software evidence cannot establish production readiness')
     records = [*visual['images'], {**brief, 'path':brief['file']}]
+    video_manifest = prefix/'video-capture-manifest.json'
+    if (root/video_manifest).is_file():
+        video = load(root, video_manifest)
+        require(video['schema'] == 'edgeops.synthetic-video-evidence.v1', 'Invalid video manifest')
+        require(re.fullmatch(r'[0-9a-f]{40}', video['source_application_commit']),
+                'Invalid video source commit')
+        require(video['physical_acceptance_verified'] is False and video['production_ready'] is False,
+                'Synthetic video cannot establish physical acceptance')
+        require(video['capture_checks']['maintenance_status'] == 'draft'
+                and video['capture_checks']['execution_enabled'] is False
+                and video['capture_checks']['source_snapshot_matches'] is True,
+                'Video capture claims disagree with the declared synthetic workflow')
+        records.append({**video, 'path':video['file']})
     for record in records:
         raw = file_at(root, prefix/record['path']).read_bytes()
         require(type(record['bytes']) is int and len(raw) == record['bytes'],

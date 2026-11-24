@@ -26,9 +26,15 @@ class EvidenceChecks(unittest.TestCase):
 
     def test_reviewed_package_passes_without_physical_authority(self):
         result = verify(self.root)
-        self.assertEqual(result['artifacts_checked'], 4)
+        self.assertEqual(result['artifacts_checked'], 5)
         self.assertFalse(result['physical_acceptance_verified'])
         self.assertFalse(result['external_links_checked'])
+
+    def test_same_size_video_change_rejected(self):
+        path = self.docs/'assets/EDGEOPS-software-demo.webm'
+        data = bytearray(path.read_bytes()); data[-1] ^= 1; path.write_bytes(data)
+        with self.assertRaisesRegex(ValueError, 'SHA-256 differs'):
+            verify(self.root)
 
     def test_changed_pdf_rejected(self):
         with (self.docs/'EDGEOPS-Software-Evidence-Brief.pdf').open('ab') as output:

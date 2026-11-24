@@ -4,6 +4,22 @@ Captured **24 November 2026** from the existing implementation using disposable 
 
 **These are actual, unedited screenshots of the running local application, not design mockups or physical measurements.** They show synthetic observations and test accounts. No real devices were connected and no equipment action was authorized.
 
+## 30-second software demonstration
+
+[Download the silent WebM preview](assets/EDGEOPS-software-demo.webm) · [Recording provenance and checksums](video-capture-manifest.json)
+
+The recording shows actual application interaction with a disposable synthetic account and database:
+
+1. Inspect a saved observation with zero/unavailable readings and explicit clock/calibration limitations.
+2. Prepare and save an explicit synthetic incident.
+3. Save a linked maintenance draft and view its retained incident reference.
+
+The capture checks verified that the saved request remained `draft`, execution stayed disabled and its captured observation hash matched the source. Sign-in happened before recording, and browser credentials/session state were not exported. The disposable service and database were removed after the run. No running user dashboard or equipment was used.
+
+Recorded source: **`27d8296e0d15997d61b9bb8fd9bc136f996c2808`**, on 24 November 2026. This video uses a different scripted fixture from the earlier screenshots and API walkthrough; it is not a full test-suite recording.
+
+The downloadable copy is a compressed **1440 x 1000, 2 fps** preview, with the same scene order and roughly 30-second timing. Frame sampling rounds the original 29.8 seconds to 30 seconds. It is a lossy re-encoding; full-size screenshots below are better for inspecting fine text. The original recording's hash is retained in the manifest alongside the published preview's hash. All displayed sensor values and identities are synthetic; no physical acceptance or model performance is established.
+
 ## 1. Inspect a saved synthetic observation
 
 ![Desktop saved-observation inspector showing declared timestamps, unknown calibration and clock-unverified status](assets/observation-inspector-1440.png)
