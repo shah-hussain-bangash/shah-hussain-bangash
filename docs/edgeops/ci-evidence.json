@@ -1,0 +1,55 @@
+{
+  "schema": "edgeops.public-ci-evidence.v1",
+  "observed_date": "2026-11-24",
+  "repository": "shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects.",
+  "commit": "9f8831f257c490a0b8febf701628bae2ecc63c2d",
+  "branch": "ui/production-workspace-20261119",
+  "pull_request": "https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./pull/2",
+  "pull_request_state": "open_draft",
+  "base_branch": "dashboard-live-edit",
+  "checks": [
+    {
+      "workflow": "EDGEOPS Dashboard Checks",
+      "run_id": 45332066838,
+      "event": "pull_request",
+      "head_sha": "9f8831f257c490a0b8febf701628bae2ecc63c2d",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45332066838"
+    },
+    {
+      "workflow": "EDGEOPS Offline Scikit-Learn Comparison",
+      "run_id": 45332066993,
+      "event": "pull_request",
+      "head_sha": "9f8831f257c490a0b8febf701628bae2ecc63c2d",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45332066993"
+    },
+    {
+      "workflow": "EDGEOPS Offline Experiment Registry",
+      "run_id": 45332066983,
+      "event": "pull_request",
+      "head_sha": "9f8831f257c490a0b8febf701628bae2ecc63c2d",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45332066983"
+    },
+    {
+      "workflow": "EDGEOPS UI Browser Acceptance",
+      "run_id": 45332067040,
+      "event": "pull_request",
+      "head_sha": "9f8831f257c490a0b8febf701628bae2ecc63c2d",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45332067040"
+    }
+  ],
+  "physical_status": {
+    "receipt": "partial_arrival_owner_reported_not_independently_verified",
+    "connection": "deferred_until_hardware_complete",
+    "physical_acceptance_verified": false,
+    "production_ready": false
+  },
+  "note": "Historical software CI evidence; no credentials, device data, physical validation or release approval."
+}
