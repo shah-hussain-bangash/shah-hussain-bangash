@@ -8,11 +8,11 @@ EDGEOPS is an engineering portfolio project for industrial condition monitoring 
 
 **Current status: software demonstrated with synthetic inputs; physical validation pending.** The owner reports that some ordered hardware has arrived. The full set is not yet confirmed, and connection is deferred until the hardware is complete. No received-part photos, exact variants, connection, calibration or physical acceptance were verified for this evidence page. The original 30-product selection is preserved.
 
-The implementation is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. The original walkthrough, screenshot and PDF evidence retains its recorded source revision, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**. Subsequent verified work is listed separately below, with the latest reviewed implementation pinned to **`99e989aff13e78d2b145f159d350f079bdf85371`**.
+The implementation is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. The original walkthrough, screenshot and PDF evidence retains its recorded source revision, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**. Subsequent verified work is listed separately below, with the latest reviewed implementation pinned to **`c99fab2965f90772ed5d90e8528706879de14438`**.
 
 ## Subsequent verified software work
 
-The latest implementation reviewed for this update is **`99e989aff13e78d2b145f159d350f079bdf85371`**, still in draft PR #2. Its four application CI workflow families passed. Earlier records below retain their original execution provenance; later work is pinned separately.
+The latest implementation reviewed for this update is **`c99fab2965f90772ed5d90e8528706879de14438`**, still in draft PR #2. Its four application CI workflow families passed. Earlier records below retain their original execution provenance; later work is pinned separately.
 
 | Work | Verified result | Evidence and boundary |
 | --- | --- | --- |
@@ -57,6 +57,22 @@ The counts are overlapping executions, not a unique-test total. New connection-b
 **Application CI at `fe0b19a`:** [Dashboard checks](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967245) · [Browser acceptance](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967025) · [Offline experiment registry](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967356) · [Model comparison](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45378967082) — all observed successful on 24 November 2026.
 
 This remains a local synthetic software path. Receipt/record consistency does not authenticate a physical source or remote clock; the development worker is not secure measured edge-to-cloud transport. Physical acceptance, calibrated reference measurements, hardware integration and deployment acceptance remain outstanding. Draft PR #2 remains unmerged and undeployed.
+
+## Isolated recovery drills
+
+Three additional regressions exercise specific failure points in disposable synthetic storage. They add tests and sanitized evidence; no application fix was needed. The latest reviewed source is `c99fab2`. Each result retains its original application baseline and execution provenance.
+
+| Injected failure | Verified outcome | Recorded result |
+| --- | --- | --- |
+| Worker exits after receiving the central receipt, before saving its local outcome | The first claim remains unfinished. After controlled lease expiry, replay saves the same receipt and timestamp, with one central observation and one central-commit audit event. | [Worker process-stop result](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/c99fab2965f90772ed5d90e8528706879de14438/projects/industrial-edge-ai-predictive-maintenance/phase-01-hardware/validation/synthetic-process-stop-recovery-result.json) |
+| Central process exits inside the write transaction, before commit | Observation and central-commit audit inserts roll back. The queue remains pending without a receipt. Restart and retry create one observation and one commit event. | [Central process-stop result](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/c99fab2965f90772ed5d90e8528706879de14438/projects/industrial-edge-ai-predictive-maintenance/phase-01-hardware/validation/synthetic-central-stop-recovery-result.json) |
+| Local receipt save encounters SQLite read-only storage | The error propagates without a completed local delivery outcome. Restored writable access and controlled lease expiry allow retry to recover the original receipt without a duplicate central row. | [Receipt-storage-failure result](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/c99fab2965f90772ed5d90e8528706879de14438/projects/industrial-edge-ai-predictive-maintenance/phase-01-hardware/validation/synthetic-receipt-storage-failure-result.json) |
+
+All **50 delivery-related tests passed** at the latest reviewed source. The process-stop cases use separate processes and actual loopback HTTP; the read-only case uses the authenticated central API in-process. Both stores' SQLite quick checks passed in each drill. Lease/backoff eligibility is controlled in test storage, so these runs do not measure elapsed recovery time.
+
+These are specific software failure cases, not power-loss, actual disk-exhaustion, every possible crash boundary, secure remote transport or general exactly-once evidence. Hardware acceptance remains pending. Test counts overlap earlier executions and must not be added together.
+
+**Application CI at `c99fab2`:** [Dashboard checks](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45392699669) · [Browser acceptance](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45392699381) · [Experiment registry](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45392699411) · [Model comparison](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45392699522) — all observed successful on 24 November 2026.
 
 ## Downloadable hardware preparation pack
 
