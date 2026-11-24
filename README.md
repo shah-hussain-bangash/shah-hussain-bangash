@@ -36,7 +36,7 @@ The [n8n AI Automation Portfolio](https://github.com/shah-hussain-bangash/N8N-AI
 
 | Portfolio | My contribution |
 | --- | --- |
-| [Zenith Group Web Development Portfolio](https://github.com/shah-hussain-bangash/Zenith-Group-Web-Development-Portfolio-) | Website development, deployment, and business integrations. [Website ranking catalog and Search Console evidence](https://github.com/shah-hussain-bangash/Zenith-Group-Web-Development-Portfolio-/blob/main/google-search-visibility/website-ranking-catalog.md) cover 91 tracker entries and two verified search results. |
+| [Zenith Group Web Development Portfolio](https://github.com/shah-hussain-bangash/Zenith-Group-Web-Development-Portfolio-) | Website development, deployment, and business integrations. [SEO Portfolio](https://github.com/shah-hussain-bangash/Zenith-Group-Web-Development-Portfolio-/blob/main/seo-portfolio/README.md) documents multi-site audits and dated Search Console evidence. [Ranking catalog](https://github.com/shah-hussain-bangash/Zenith-Group-Web-Development-Portfolio-/blob/main/google-search-visibility/website-ranking-catalog.md). |
 | [RBD Tourism Chauffeur Services](https://github.com/shah-hussain-bangash/RBD-Tourism-Chauffeur-Services) | Website and chatbot development, SEO, blog writing, and advertising design. [Advertising portfolio](https://github.com/shah-hussain-bangash/RBD-Tourism-Chauffeur-Services/blob/main/advertising-portfolio/README.md) |
 | [Dubai Property Developers](https://github.com/shah-hussain-bangash/dubai-property-developers) | Real estate web application. |
 
