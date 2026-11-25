@@ -1,6 +1,6 @@
 # EDGEOPS — Software evidence and hardware-validation preparation
 
-Evidence reviewed: **24 November 2026**. [Project repository](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects.) · [Draft implementation PR #2](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./pull/2)
+Evidence reviewed: **25 November 2026**. [Project repository](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects.) · [Draft implementation PR #2](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./pull/2)
 
 ## Project at a glance
 
@@ -8,11 +8,11 @@ EDGEOPS is an engineering portfolio project for industrial condition monitoring 
 
 **Current status: software demonstrated with synthetic inputs; physical validation pending.** The owner reports that some ordered hardware has arrived. The full set is not yet confirmed, and connection is deferred until the hardware is complete. No received-part photos, exact variants, connection, calibration or physical acceptance were verified for this evidence page. The original 30-product selection is preserved.
 
-The implementation is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. The original walkthrough, screenshot and PDF evidence retains its recorded source revision, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**. Subsequent verified work is listed separately below, with the latest reviewed implementation pinned to **`ff52301b93bcfa4baa47cfa6a636a0ab4f09eda5`**.
+The implementation is on **`ui/production-workspace-20261119`**, in draft PR #2 targeting **`dashboard-live-edit`**. It is not merged to the default branch. The original walkthrough, screenshot and PDF evidence retains its recorded source revision, **`9f8831f257c490a0b8febf701628bae2ecc63c2d`**. Subsequent verified work is listed separately below, with the latest reviewed implementation pinned to **`63411f9f798a0424334ee26cc09b92d32c58d4d6`**.
 
 ## Subsequent verified software work
 
-The latest implementation reviewed for this update is **`ff52301b93bcfa4baa47cfa6a636a0ab4f09eda5`**, still in draft PR #2. Its four application CI workflow families passed. Earlier records below retain their original execution provenance; later work is pinned separately.
+The latest implementation reviewed for this update is **`63411f9f798a0424334ee26cc09b92d32c58d4d6`**, still in draft PR #2. Its four application CI workflow families passed. Earlier records below retain their original execution provenance; later work is pinned separately.
 
 | Work | Verified result | Evidence and boundary |
 | --- | --- | --- |
@@ -89,6 +89,21 @@ Recorded executions passed **61 hardware-side software tests** and **52 delivery
 The summary's `requires_review` flag concerns transformation/quarantine state; false is not sensor-quality or physical acceptance. The 600-record fixture explicitly leaves H1 pending. No hardware, measured sampling rate or reference accuracy was verified.
 
 **Application CI at `ff52301`:** [Dashboard checks](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45399746575) · [Browser acceptance](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45399746482) · [Experiment registry](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45399746645) · [Model comparison](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45399746343) — all observed successful on 24 November 2026.
+
+## Concurrent admission checks
+
+Two finite races complement the full-capacity checks. Each starts with 9,999 synthetic records and releases two writers from a barrier. No application fix was needed; the latest reviewed test source is `63411f9`.
+
+| Boundary | Observed outcome | Evidence and scope |
+| --- | --- | --- |
+| Central store's final slot | One authenticated in-process request returns HTTP 201; the other returns HTTP 429 without a receipt. Final count is 10,000. Retrying the accepted request returns the same receipt; preexisting rows stay unchanged and only one new audit event is added. | [Central race result](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/63411f9f798a0424334ee26cc09b92d32c58d4d6/projects/industrial-edge-ai-predictive-maintenance/phase-01-hardware/validation/synthetic-central-last-slot-result.json). SQLite quick check and foreign-key check passed. |
+| Local queue's final slot | One producer is accepted and one receives a capacity refusal. Final count is 10,000 pending events. Duplicate retry adds nothing; preexisting rows, payload-byte accounting and reopened queue counts remain intact. | [Queue race result](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./blob/63411f9f798a0424334ee26cc09b92d32c58d4d6/projects/industrial-edge-ai-predictive-maintenance/phase-01-hardware/validation/synthetic-queue-last-slot-result.json). The accepted acknowledgment is `edge-committed`, not proof of central delivery. |
+
+Most initial rows were populated directly. These cases observe one two-writer race each, not every interleaving, multi-host contention, distributed delivery, sustained throughput or soak performance. All **54 delivery-related tests passed**; this execution overlaps earlier suites and must not be added to historical counts as unique tests.
+
+**Application CI at `63411f9`:** [Dashboard checks](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45550735221) · [Browser acceptance](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45550735224) · [Experiment registry](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45550735399) · [Model comparison](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./actions/runs/45550735197) — all observed successful on 25 November 2026.
+
+Hardware acceptance remains pending. The original 30-product selection, previous media/pack provenance and unmerged/undeployed application status are unchanged.
 
 ## Downloadable hardware preparation pack
 
