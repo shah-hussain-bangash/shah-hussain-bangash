@@ -1,32 +1,33 @@
 # Shah Hussain Bangash
 
-**Senior AI Engineer | Enterprise AI Solutions Architecture | Generative & Agentic AI | AI Automation**
+**Senior AI Engineer | Enterprise AI Solutions Architecture | Bilingual Document AI & Governed Agents**
 
-Azure OpenAI · Arabic–English RAG · LangGraph · AI Governance · n8n Automation · Web Development
+Dubai, UAE · I build Arabic–English document AI and agent workflows with evidence-linked decisions, human approvals, and audit trails.
 
-I’m based in Dubai, UAE. At Zenith Group, I build Arabic and English AI assistants with Azure OpenAI and Azure AI Search and own their APIs and release pipelines. In my independent projects, I design agentic workflows with human approvals, audit trails, and recovery controls.
+At Zenith Group, I build Arabic and English AI assistants with Azure OpenAI and Azure AI Search and own their APIs and release pipelines.
 
-[AI Development](#ai-development) · [AI Automation](#ai-automation) · [Web & Client Delivery](#web--client-delivery) · [Cloud Deployments](#cloud-deployments)
+[Featured AI case studies](#featured-ai-case-studies) · [AI Automation](#ai-automation) · [Web & Client Delivery](#web--client-delivery) · [Cloud Deployments](#cloud-deployments)
 
-## AI Development
+## Featured AI case studies
 
-### Featured case studies
-
-| Project | My contribution and evidence |
+| Project | What I built and how to verify it |
 | --- | --- |
-| [NAWA Document Intelligence](https://github.com/shah-hussain-bangash/nawa-document-intelligence) | I built Arabic and English quotation extraction with page-level evidence and deterministic VAT and total checks. I evaluated permission-filtered retrieval, citations, and abstention. The local portal now has a searchable register of 38 capabilities. Browser checks verified demo sign-in and dashboard search in English and Arabic. Production readiness remains open, with scanned quotation OCR the next workflow to verify end to end. [Case study](https://github.com/shah-hussain-bangash/nawa-document-intelligence/blob/main/docs/07-case-study/NAWA_CASE_STUDY.md) |
-| [FinAgent Enterprise](https://github.com/shah-hussain-bangash/finagent-enterprise) | I tied reviewer decisions to specific report versions and evidence snapshots. The synthetic workflow demonstrates independent review, including rejection of stale decisions and self-review. [Case study](https://github.com/shah-hussain-bangash/finagent-enterprise/blob/main/docs/07-case-study/08-CASE-STUDY.md) |
-| [Aviation Intelligence Nexus](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus) | I switched the flight-data audit to month-by-month processing after the full-period query exceeded temporary storage. The audit reconciled 2.84 million historical flight records. A published **12-document enterprise architecture package** covers requirements, system design, data and AI governance, security, engineering, operations and readiness; all 24 production acceptance gates remain open. [Architecture package and readiness register](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/enterprise-architecture/12-READINESS-AND-EVIDENCE-REGISTER.md) [Quick summary](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/case-study/AVIATION_INTELLIGENCE_NEXUS_SUMMARY.md) · [75-second walkthrough](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/case-study/assets/aviation-intelligence-nexus-walkthrough.mp4) · [Technical case study](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/case-study/AVIATION_INTELLIGENCE_NEXUS_CASE_STUDY.md) |
+| [NAWA Document Intelligence](https://github.com/shah-hussain-bangash/nawa-document-intelligence) | I built Arabic–English supplier quotation extraction with page-level evidence and deterministic VAT and total checks. The synthetic walkthrough shows how an incorrect VAT amount is flagged and excluded from the valid price comparison. [Case study](https://github.com/shah-hussain-bangash/nawa-document-intelligence/blob/main/docs/07-case-study/NAWA_CASE_STUDY.md) |
+| [FinAgent Enterprise](https://github.com/shah-hussain-bangash/finagent-enterprise) | I built a synthetic AML investigation workflow that ties independent reviewer decisions to report versions and evidence snapshots. The linked GitHub Actions run passed all five jobs. [Walkthrough](https://github.com/shah-hussain-bangash/finagent-enterprise/blob/main/docs/workspace-demo-walkthrough.md) · [CI results](https://github.com/shah-hussain-bangash/finagent-enterprise/actions/runs/44917079385) |
+| [Aviation Intelligence Nexus](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus) | I redesigned the flight-data audit to run month by month and reconciled **2.84 million historical US domestic flight records**. [75-second walkthrough](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/case-study/assets/aviation-intelligence-nexus-walkthrough.mp4) · [Tableau workbook](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/tableau/README.md) · [Analysis report](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/tableau/ANALYSIS_REPORT.md) |
+
+### More enterprise AI and data engineering
+
+| Project | What it demonstrates |
+| --- | --- |
 | [NEXUS AI Control](https://github.com/shah-hussain-bangash/nexus-ai-control) | I tied approvals to the exact request and destination. When a timeout leaves the outcome uncertain, the workflow records it for reconciliation. [Case study](https://github.com/shah-hussain-bangash/nexus-ai-control/blob/main/docs/case-study/NEXUS_AI_CONTROL_CASE_STUDY.md) |
+| [DataNexus AI Enterprise](https://github.com/shah-hussain-bangash/DataNexus-AI-Enterprise) | I built a local data pipeline and six-page Power BI report with validated NYC taxi data and stored MTA transit observations from bounded collection runs. The January 2024 report covers **2.93 million accepted trips with January pickup dates**. [Power BI project](https://github.com/shah-hussain-bangash/DataNexus-AI-Enterprise/tree/main/dashboards/powerbi) |
+| [IndustrialAI Sentinel](https://github.com/shah-hussain-bangash/IndustrialAI-Sentinel) | Runnable local demo for equipment condition monitoring, maintenance review, and work-order tracking. |
 | [SupplyPilot AI](https://github.com/shah-hussain-bangash/SupplyPilot-AI) | Procurement prototype covering supplier quotations, approval, simulated purchasing, and invoice reconciliation. |
 
-### Data engineering and industrial AI
+### Edge AI and semiconductor engineering
 
-| Project | Focus |
-| --- | --- |
-| [DataNexus AI Enterprise](https://github.com/shah-hussain-bangash/DataNexus-AI-Enterprise) | Architecture and engineering foundation for streaming, lakehouse storage, and governed AI investigation. |
-| [EDGEOPS](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects.) | I built a local industrial-operations prototype with authenticated APIs, synthetic observation evidence, incidents and maintenance drafts. Verified evidence covers installation, recovery, retained source snapshots, offline capture summaries and delivery integrity checks; four CI workflow families passed at reviewed commit `63411f9`. Hardware connection and physical validation are pending. [Project evidence](docs/edgeops/EVIDENCE.md) · [Visual walkthrough](docs/edgeops/VISUAL-WALKTHROUGH.md) · [PDF brief](docs/edgeops/EDGEOPS-Software-Evidence-Brief.pdf) · [Hardware preparation pack](docs/edgeops/HARDWARE-ARRIVAL-PACK.md) · [Draft implementation](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./pull/2) |
-| [IndustrialAI Sentinel](https://github.com/shah-hussain-bangash/IndustrialAI-Sentinel) | Runnable local demo for equipment condition monitoring, maintenance review, and work-order tracking. |
+[EDGEOPS](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects.) — I built a local industrial-operations prototype with authenticated APIs, synthetic observation evidence, incidents and maintenance drafts. Verified evidence covers installation, recovery, retained source snapshots, offline capture summaries and delivery integrity checks; four CI workflow families passed at reviewed commit `63411f9`. Hardware connection and physical validation are pending. [Project evidence](docs/edgeops/EVIDENCE.md) · [Visual walkthrough](docs/edgeops/VISUAL-WALKTHROUGH.md) · [PDF brief](docs/edgeops/EDGEOPS-Software-Evidence-Brief.pdf) · [Hardware preparation pack](docs/edgeops/HARDWARE-ARRIVAL-PACK.md) · [Draft implementation](https://github.com/shah-hussain-bangash/AI-Edge-Semiconductor-Career-Projects./pull/2)
 
 ## AI Automation
 
