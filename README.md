@@ -12,8 +12,8 @@ At Zenith Group, I build Arabic and English AI assistants with Azure OpenAI and 
 
 | Project | What I built and how to verify it |
 | --- | --- |
-| [NAWA Document Intelligence](https://github.com/shah-hussain-bangash/nawa-document-intelligence) | I built Arabic–English supplier quotation extraction with page-level evidence and deterministic VAT and total checks. The synthetic walkthrough shows how an incorrect VAT amount is flagged and excluded from the valid price comparison. [Case study](https://github.com/shah-hussain-bangash/nawa-document-intelligence/blob/main/docs/07-case-study/NAWA_CASE_STUDY.md) |
-| [FinAgent Enterprise](https://github.com/shah-hussain-bangash/finagent-enterprise) | I built a synthetic AML investigation workflow that ties independent reviewer decisions to report versions and evidence snapshots. The linked GitHub Actions run passed all five jobs. [Walkthrough](https://github.com/shah-hussain-bangash/finagent-enterprise/blob/main/docs/workspace-demo-walkthrough.md) · [CI results](https://github.com/shah-hussain-bangash/finagent-enterprise/actions/runs/44917079385) |
+| [NAWA Document Intelligence](https://github.com/shah-hussain-bangash/nawa-document-intelligence) | I built Arabic–English supplier quotation extraction with page-level evidence and deterministic VAT and total checks. The synthetic walkthrough shows how an incorrect VAT amount is flagged and excluded from the valid price comparison. [Case study](https://github.com/shah-hussain-bangash/nawa-document-intelligence/blob/main/docs/07-case-study/NAWA_CASE_STUDY.md) · [Scanned OCR evaluation](https://github.com/shah-hussain-bangash/nawa-document-intelligence/blob/main/docs/05-testing-evaluation/SYNTHETIC_SCANNED_QUOTATION_EVALUATION.md) |
+| [FinAgent Enterprise](https://github.com/shah-hussain-bangash/finagent-enterprise) | I built a synthetic AML investigation workflow that ties independent reviewer decisions to report versions and evidence snapshots. All five GitHub Actions jobs passed on the tested revision. [Walkthrough at `6c0bb87`](https://github.com/shah-hussain-bangash/finagent-enterprise/blob/6c0bb8714e8f4abe991712692b01cffbd32bb73f/docs/workspace-demo-walkthrough.md) · [CI results](https://github.com/shah-hussain-bangash/finagent-enterprise/actions/runs/44917079385) |
 | [Aviation Intelligence Nexus](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus) | I redesigned the flight-data audit to run month by month and reconciled **2.84 million historical US domestic flight records**. [75-second walkthrough](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/case-study/assets/aviation-intelligence-nexus-walkthrough.mp4) · [Tableau workbook](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/tableau/README.md) · [Analysis report](https://github.com/shah-hussain-bangash/aviation-intelligence-nexus/blob/main/docs/tableau/ANALYSIS_REPORT.md) |
 
 ### More enterprise AI and data engineering
@@ -43,9 +43,18 @@ My [n8n AI Automation Portfolio](https://github.com/shah-hussain-bangash/N8N-AI-
 
 ## Cloud Deployments
 
-- **Zenith Enterprise AI Workspace** — development deployment. [Open workspace](https://zenith-ai-workspace.duckdns.org/sign-in) · [Architecture case study](https://github.com/shah-hussain-bangash/ENTERPRISE-AI-PRODUCTION-SYSTEMS/blob/main/docs/case-study/ZENITH_ENTERPRISE_AI_WORKSPACE_CASE_STUDY.md)
-- **Dubai Property Developers** — [Open project](https://dubai-property-test.duckdns.org/)
-- **Dubai Visa Flow** — [Open portal](https://dubaivisaflow.duckdns.org/portal)
+- **Zenith Enterprise AI Workspace** — development workspace. [Architecture case study](https://github.com/shah-hussain-bangash/ENTERPRISE-AI-PRODUCTION-SYSTEMS/blob/main/docs/case-study/ZENITH_ENTERPRISE_AI_WORKSPACE_CASE_STUDY.md)
+- **Dubai Property Developers** — [Verified local workflow and screenshots](https://github.com/shah-hussain-bangash/dubai-property-developers/blob/main/docs/verification/website-operations-local-2026-11-24.md)
+- **Dubai Visa Flow** — development portal. Public availability is unverified.
+
+<details>
+<summary>Direct development URLs (availability unverified)</summary>
+
+- [Zenith Enterprise AI Workspace](https://zenith-ai-workspace.duckdns.org/sign-in)
+- [Dubai Property Developers](https://dubai-property-test.duckdns.org/)
+- [Dubai Visa Flow](https://dubaivisaflow.duckdns.org/portal)
+
+</details>
 
 I’m interested in UAE opportunities in senior AI engineering, enterprise AI solutions architecture, and applied AI for aviation. [LinkedIn](https://www.linkedin.com/in/shah-hussain-bangash-8b3b87141/)
 
